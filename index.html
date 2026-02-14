@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Krishti Bikash Kendra</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: red;
+            color: yellow;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: darkred;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid yellow;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: yellow;
+            font-weight: bold;
+        }
+
+        .sidebar ul li a:hover {
+            color: white;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Popup Window Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: yellow;
+            color: red;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: red;
+            color: yellow;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .popup a:hover {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+    <script>
+        // Function to show the donation popup
+        function showDonatePopup() {
+            document.getElementById('donatePopup').style.display = 'block';
+        }
+
+        // Function to close the donation popup
+        function closeDonatePopup() {
+            document.getElementById('donatePopup').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="videos.html" target="_blank">Videos</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="#">Cultural Programme</a></li>
+            <li><a href="#">Upcoming Event</a></li>
+            <!-- Updated Donate Link -->
+            <li><a href="javascript:void(0);" onclick="showDonatePopup()">Donate</a></li>
+            <li><a href="#" target="_blank">Facebook</a></li>
+            <li><a href="https://share.google/f5LcgmDqC8F3AvhK4" target="_blank">Location</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Krishti Bikash Kendra</h1>
+        <p><strong>Address:</strong> Belbari-781307</p>
+
+        <p>
+            This is a religious place where we get together and pray to God. 
+            We are following Srimanta Shankardev Sangha rules. 
+            We celebrate Sri Krishna Janmashtami as the main festival of this place every year.
+        </p>
+    </div>
+
+</div>
+
+<!-- Donate Popup Window -->
+<div id="donatePopup" class="popup">
+    <p>Please contact the President and Secretary to donate for our Mandir! Thanks.</p>
+    <a href="index.html" onclick="closeDonatePopup()"></a>
+</div>
+
+</body>
+</html>
